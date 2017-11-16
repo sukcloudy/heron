@@ -1,5 +1,5 @@
 # versions shared across artifacts that should be upgraded together
-aws_version = "1.11.58"
+aws_version = "1.11.230"
 curator_version = "2.9.0"
 google_client_version = "1.22.0"
 jackson_version = "2.6.6"
@@ -52,6 +52,21 @@ maven_jar(
 maven_jar(
   name = "com_amazonaws_aws_java_sdk_s3",
   artifact = "com.amazonaws:aws-java-sdk-s3:" + aws_version,
+)
+
+maven_jar(
+  name = "com_amazonaws_aws_java_sdk_ecs",
+  artifact = "com.amazonaws:aws-java-sdk-ecs:" + aws_version,
+)
+
+maven_jar(
+  name = "com_amazonaws_aws_java_sdk_test_utils",
+  artifact = "com.amazonaws:aws-java-sdk-test-utils:" + aws_version,
+)
+
+maven_jar(
+  name = "com_amazonaws_jmespath_java",
+  artifact = "com.amazonaws:jmespath-java:" + aws_version,
 )
 
 maven_jar(
